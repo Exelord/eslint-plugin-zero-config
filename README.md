@@ -34,19 +34,19 @@ Add `eslint-plugin` to the plugins section of your `.eslintrc` configuration fil
 
 ### Configs
 
-Add `javascript` to the extends section of your `.eslintrc` configuration file to extends by all recommended JS rules:
+Add `javascript` to the extends section of your `.eslintrc` configuration file to extends by all recommended JS rules for browser scripts:
 
 ```json
 {
     "extends": [
-        "plugin:javascript/recommended",
+        "plugin:javascript/browser",
     ]
 }
 ```
 
 #### Available Configs
 
-- `plugin:javascript/recommended` - recommended rules
+- `plugin:javascript/browser` - browser rules
 - `plugin:javascript/node` - node.js rules
 - `plugin:javascript/ember` - ember.js rules
 
