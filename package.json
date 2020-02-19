@@ -1,0 +1,45 @@
+{
+  "name": "eslint-plugin-javascript",
+  "version": "0.0.0",
+  "description": "A complete ESLint plugin for javascript projects",
+  "repository": "https://github.com/exelord/eslint-plugin-javascript",
+  "private": true,
+  "main": "lib/index.js",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "javascript"
+  ],
+  "scripts": {
+    "release": "release-it",
+    "test": "jest"
+  },
+  "release-it": {
+    "git": {
+      "tagName": "v${version}",
+      "commitMessage": "v${version}"
+    },
+    "github": {
+      "release": true
+    }
+  },
+  "dependencies": {
+    "babel-eslint": "10.0.3",
+    "eslint-plugin-ember": "7.7.2",
+    "eslint-plugin-json": "2.0.1",
+    "eslint-plugin-node": "11.0.0"
+  },
+  "devDependencies": {
+    "eslint": "~6.8.0",
+    "glob": "^7.1.6",
+    "jest": "^25.1.0",
+    "release-it": "^12.5.0"
+  },
+  "peerDependencies": {
+    "eslint": "^6.7.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
