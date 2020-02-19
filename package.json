@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "A complete ESLint plugin for javascript projects",
   "repository": "https://github.com/exelord/eslint-plugin-javascript",
-  "private": true,
   "main": "lib/index.js",
   "keywords": [
     "eslint",
