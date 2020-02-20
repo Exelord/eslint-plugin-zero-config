@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "babel-eslint": "10.0.3",
-    "eslint-plugin-ember": "7.7.2",
+    "eslint-plugin-ember": "7.8.1",
     "eslint-plugin-json": "2.0.1",
     "eslint-plugin-node": "11.0.0"
   },
@@ -36,9 +36,9 @@
     "release-it": "^12.5.0"
   },
   "peerDependencies": {
-    "eslint": "^6.7.0"
+    "eslint": "^6.8.0"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=10.0.0"
   }
 }

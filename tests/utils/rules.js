@@ -1,28 +1,32 @@
 const glob = require('glob');
 const path = require('path');
 
-const eslintDir = path.dirname(require.resolve('eslint/package.json'));
+function getPluginRules(name) {
+  const packageDir = path.dirname(require.resolve(`${name}/package.json`));
+  const rulesPaths = glob.sync(`${packageDir}/lib/rules/*.js`, {});
 
-const eslintRulesPaths = glob.sync(`${eslintDir}/lib/rules/*.js`, {});
+  return rulesPaths.map((filePath) => {
+    const rule = require(filePath);
+    const regexp = `^${packageDir}/lib/rules/(?<ruleName>.+).js`;
+    const { ruleName } = filePath.match(regexp).groups;
 
-const eslintRules = eslintRulesPaths.map((filePath) => {
-  const rule = require(filePath);
-  const regexp = `^${eslintDir}/lib/rules/(?<ruleName>.+)\.js`
-  const { ruleName } = filePath.match(regexp).groups
-  
-  if (ruleName === 'index') return
-  
-  return { name: ruleName, deprecated: rule.meta && rule.meta.deprecated }
-}).filter((a) => a);
+    if (ruleName === 'index') return null;
 
-const pluginRulesFilesPaths = glob.sync('lib/configs/-private/eslint/*.js', {});
+    return { name: ruleName, deprecated: rule.meta && rule.meta.deprecated };
+  }).filter((a) => a);
+}
 
-const pluginRules = pluginRulesFilesPaths.map((filePath) => {
-  const ruleFiles = require(`../../${filePath}`);
-  return Object.keys(ruleFiles.rules).map((name) => ({ name }))
-}).flat();
+function getPackageRules(name) {
+  const pluginRulesFilesPaths = glob.sync(`lib/configs/-private/${name}/*.js`, {});
+
+  return pluginRulesFilesPaths.map((filePath) => {
+    const ruleFiles = require(`../../${filePath}`);
+
+    return Object.keys(ruleFiles.rules).map((rule) => ({ name: rule }));
+  }).flat();
+}
 
 module.exports = {
-  eslintRules,
-  pluginRules
-}
+  getPackageRules,
+  getPluginRules
+};
