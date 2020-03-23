@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-javascript",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "A complete ESLint plugin for javascript projects",
   "repository": "https://github.com/exelord/eslint-plugin-javascript",
   "main": "lib/index.js",
