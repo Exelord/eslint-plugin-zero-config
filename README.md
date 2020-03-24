@@ -49,7 +49,7 @@ Example:
 
 ```json
 {
-    "plugins": : ["zero-config"],
+    "plugins": ["zero-config"],
     "extends": ["plugin:zero-config/node"]
 }
 ```
