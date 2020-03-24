@@ -1,4 +1,4 @@
-# eslint-plugin-javascript
+# eslint-plugin-zero-config
 
 A complete ESLint plugin for javascript projects
 
@@ -10,13 +10,13 @@ You'll first need to install [ESLint](http://eslint.org):
 $ npm i eslint --save-dev
 ```
 
-Next, install `eslint-plugin-javascript`:
+Next, install `eslint-plugin-zero-config`:
 
 ```
-$ npm install eslint-plugin-javascript --save-dev
+$ npm install eslint-plugin-zero-config --save-dev
 ```
 
-**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-javascript` globally.
+**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-zero-config` globally.
 
 ## Usage
 
@@ -27,28 +27,33 @@ Add `eslint-plugin` to the plugins section of your `.eslintrc` configuration fil
 ```json
 {
     "plugins": [
-        "javascript"
+        "zero-config"
     ]
 }
 ```
 
 ### Configs
 
-Add `javascript` to the extends section of your `.eslintrc` configuration file to extends by all recommended JS rules for browser scripts:
+Add `zero-config` plugin and extend your config with zero-conifg!
+
+##### Available Configs
+
+- `plugin:zero-config/recommended` - recommended config for all environments
+- `plugin:zero-config/browser` - browser config
+- `plugin:zero-config/node` - node.js config
+- `plugin:zero-config/ember` - ember.js config
+
+** Remember! There is no need to include a few of them. Each of them are fully configured to bring best possible experience **
+
+Example:
 
 ```json
 {
-    "extends": [
-        "plugin:javascript/browser",
-    ]
+    "plugins": : ["zero-config"],
+    "extends": ["plugin:zero-config/node"]
 }
 ```
 
-#### Available Configs
-
-- `plugin:javascript/browser` - browser rules
-- `plugin:javascript/node` - node.js rules
-- `plugin:javascript/ember` - ember.js rules
 
 
 

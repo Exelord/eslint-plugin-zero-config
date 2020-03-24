@@ -1,8 +1,8 @@
 {
-  "name": "eslint-plugin-javascript",
+  "name": "eslint-plugin-zero-config",
   "version": "1.3.4",
   "description": "A complete ESLint plugin for javascript projects",
-  "repository": "https://github.com/exelord/eslint-plugin-javascript",
+  "repository": "https://github.com/exelord/eslint-plugin-zero-config",
   "main": "lib/index.js",
   "keywords": [
     "eslint",
