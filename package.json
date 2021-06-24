@@ -28,19 +28,19 @@
   },
   "dependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint-plugin-decorator-position": "~1.1.0",
-    "eslint-plugin-ember": "~7.11.1",
-    "eslint-plugin-json": "~2.1.1",
-    "eslint-plugin-node": "~11.0.0"
+    "eslint-plugin-decorator-position": "^2.2.28",
+    "eslint-plugin-ember": "^10.5.1",
+    "eslint-plugin-json": "^3.0.0",
+    "eslint-plugin-node": "^11.1.0"
   },
   "devDependencies": {
-    "eslint": "~6.8.0",
-    "glob": "^7.1.6",
-    "jest": "^25.2.0",
-    "release-it": "^13.3.1"
+    "eslint": "^7.29.0",
+    "glob": "^7.1.7",
+    "jest": "^27.0.5",
+    "release-it": "^14.10.0"
   },
   "peerDependencies": {
-    "eslint": "^6.8.0"
+    "eslint": "^7.29.0"
   },
   "engines": {
     "node": ">=12.0.0"
