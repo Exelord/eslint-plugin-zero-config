@@ -27,6 +27,31 @@ it('specifies all ember rules', () => {
   expect(rules.map((rule) => rule.name).sort()).toEqual(emberRules.map((rule) => rule.name).sort());
 });
 
+it("specifies all node rules", () => {
+  const emberRules = getPluginRules("eslint-plugin-node");
+  const rules = getPackageRules("node").map((rule) => {
+    rule.name = rule.name.replace("node/", "");
+
+    return rule;
+  });
+
+  expect(rules.map((rule) => rule.name).sort()).toEqual(
+    emberRules.map((rule) => rule.name).sort()
+  );
+});
+
+it("specifies all decorator-position rules", () => {
+  const emberRules = getPluginRules("eslint-plugin-decorator-position");
+  const rules = getPackageRules("decorator-position").map((rule) => {
+    rule.name = rule.name.replace("decorator-position/", "");
+
+    return rule;
+  });
+
+  expect(rules.map((rule) => rule.name).sort()).toEqual(
+    emberRules.map((rule) => rule.name).sort()
+  );
+});
 it("specifies all decorator-position rules", () => {
   const emberRules = getPluginRules("eslint-plugin-decorator-position");
   const rules = getPackageRules("decorator-position").map((rule) => {
