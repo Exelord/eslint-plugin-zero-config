@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-zero-config",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "A complete ESLint plugin for javascript projects",
   "repository": "https://github.com/exelord/eslint-plugin-zero-config",
   "main": "lib/index.js",
